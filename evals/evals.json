@@ -1,0 +1,53 @@
+{
+  "skill_name": "anti-slop-ru",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Можешь причесать этот абзац? Сейчас звучит как ChatGPT. Смысл и все цифры оставь:\n\n«В современном мире, где технологии не стоят на месте, AI-ассистенты являются неотъемлемой частью процесса разработки программного обеспечения. Стоит отметить, что данные инструменты позволяют существенно повысить эффективность работы инженеров, обеспечивая сокращение времени на рутинные задачи до 40%. В заключение, можно с уверенностью сказать, что внедрение данных решений является ключевым фактором успеха в условиях быстро меняющегося мира.»",
+      "expected_output": "Полная, но бережная стилистическая правка по естественной просьбе «причесать» текст. Убраны явные штампы, сохранены все исходные факты и 40%; новые примеры, обещания или причинно-следственные выводы не добавлены.",
+      "files": [],
+      "expectations": [
+        "The number 40% and the claim about engineers saving time on routine tasks are preserved",
+        "The output does not add examples, benefits, or claims absent from the source",
+        "The output removes the most obvious template openers and padding without flattening into slang",
+        "The response provides an edited passage rather than only an audit"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Перепиши попроще, но деловой тон сохрани — это для отчёта руководителю. Не делай разговорным и не меняй факты:\n\n«В рамках реализации проекта осуществляется внедрение системы электронного документооборота. Данная система обеспечивает возможность сокращения времени обработки документов. Осуществляется контроль качества на всех этапах, производится оценка эффективности по итогам каждого квартала.»",
+      "expected_output": "Текст становится легче для чтения, но сохраняет деловой регистр, термин и те же факты: внедряют СЭД, документы обрабатываются быстрее, качество контролируют, эффективность оценивают ежеквартально. Без разговорных оборотов и новых деталей.",
+      "files": [],
+      "expectations": [
+        "The response keeps a formal/business register and does not become colloquial",
+        "All four source facts remain: document-management system rollout, shorter processing time, quality control, quarterly effectiveness review",
+        "The output simplifies at least one awkward phrase without changing the claim",
+        "The output adds no responsible actor, method, result, or detail not stated in the source"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Посмотри, где в этом черновике слышно ChatGPT. Пока не переписывай: просто процитируй места и коротко объясни, что в них не так:\n\n«Давайте разберёмся, почему в 2025 году компании переходят на облачные решения. Это не просто мода — это новая реальность. Облачные технологии трансформируют подходы к хранению данных. Эксперты считают, что рынок облачных услуг продолжит расти. Данные говорят нам: 78% опрошенных компаний уже используют хотя бы одно облачное решение. Подводя итог, можно с уверенностью сказать, что будущее — за гибридными средами. Надеюсь, этот материал был полезен!»",
+      "expected_output": "Только аудит: цитаты из исходника и краткие объяснения проблем. Сам черновик не переписывается и не заменяется новой версией. В аудите упомянуты несколько конкретных шаблонов, а не только общий вердикт.",
+      "files": [],
+      "expectations": [
+        "The response does not provide a rewritten version of the post",
+        "The response quotes at least three concrete phrases from the draft and explains why they sound templated",
+        "The audit preserves the source wording accurately when quoting it",
+        "The response treats 2025 and 78% as source facts, not as errors to remove"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Поправь только повторы в этом абзаце. Формальный тон и термины оставь, остальное не трогай:\n\n«Данный подход является основой для оценки рисков. Данный подход применяется на этапе планирования. Данный подход позволяет выявить факторы риска до начала работ.»",
+      "expected_output": "Точечная правка: сокращено повторение «данный подход», при этом сохранены формальный стиль, термин «оценка рисков» и все три исходных утверждения. Другие характерные обороты не чистятся, поскольку пользователь просил исправить только повторы.",
+      "files": [],
+      "expectations": [
+        "The repeated phrase «Данный подход» is reduced without introducing ambiguity about the subject",
+        "The formal register and the term «оценка рисков» are preserved",
+        "All three claims remain: basis for risk assessment, use during planning, and identification of risk factors before work starts",
+        "The response does not perform unrelated stylistic cleanup or add facts"
+      ]
+    }
+  ]
+}
