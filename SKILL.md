@@ -3,7 +3,6 @@ name: anti-slop-ru
 description: >-
   Edit, proofread, or audit Russian prose while preserving meaning, facts, register, and author voice. Use for requests like «сделай текст живее/естественнее/понятнее», «перепиши по-человечески», «причеши текст», «пахнет ChatGPT/нейросетью», «убери нейроязык», «перепиши без воды и штампов», «вычитай и поправь», or «что здесь звучит искусственно?». Route by intent: full edit, light proofreading, audit only, or targeted fix. If asked to make formal prose livelier, preserve its official/business register and necessary terms; do not make it colloquial. Treat «убери канцелярит» as a narrow request, not the default trigger. Also use when drafting Russian prose. See references/triggers.md.
 metadata:
-  license: MIT
   trigger: Writing or editing Russian prose; de-AI-ing Russian drafts
 ---
 
@@ -106,7 +105,3 @@ Below 35/50: revise.
 ## Examples
 
 See [references/examples.md](references/examples.md) for before/after transformations in Russian.
-
-## License
-
-MIT.
